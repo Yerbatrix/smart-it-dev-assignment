@@ -1,0 +1,32 @@
+.app-header {
+  background: linear-gradient(90deg, #007bff, #00d4ff); /* Dodajemy gradient */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Mocniejszy cień */
+  width: 100%; /* Header rozciąga się na pełną szerokość */
+  font-family: "Poppins", sans-serif; /* Nowoczesna czcionka */
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5rem; /* Zwiększamy rozmiar czcionki */
+  letter-spacing: 1.5px;
+  text-transform: uppercase; /* Wyróżniamy tytuł aplikacji */
+  animation: fadeIn 1.5s ease-in-out; /* Dodajemy animację wczytywania */
+}
+
+/* Dodajemy delikatną animację wczytywania */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

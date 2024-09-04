@@ -11,7 +11,7 @@ export interface User {
 
 interface UserState {
   users: User[];
-  status: "idle" | "loading" | "failed";
+  status: "idle" | "loading" | "failed" | "completed"; // Dodajemy nowy status 'completed'
 }
 
 const initialState: UserState = {
@@ -36,7 +36,7 @@ const userSlice = createSlice({
         state.status = "loading";
       })
       .addCase(fetchUsers.fulfilled, (state, action) => {
-        state.status = "idle";
+        state.status = "completed"; // Zmieniamy status na 'completed', aby uniknąć ponownego pobierania
         state.users = action.payload;
       })
       .addCase(fetchUsers.rejected, (state) => {

@@ -1,0 +1,34 @@
+.app-footer {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* Zapewnia, że stopka "wypycha" się na dół */
+  font-family: "Poppins", sans-serif;
+  width: 100%; /* Stopka zajmuje pełną szerokość strony */
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Delikatny cień na górze stopki */
+}
+
+.app-footer p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.footer-links span {
+  color: white;
+}

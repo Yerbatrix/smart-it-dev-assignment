@@ -1,0 +1,134 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Usuń nadmiar przewijania */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-image: url("../../public/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+main {
+  flex-grow: 1;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.user-table-container {
+  width: 100%;
+  margin: 20px 0;
+  overflow-x: auto; /* Przewijanie poziome dla małych ekranów */
+}
+
+.user-table {
+  width: 100%; /* Zajmij pełną szerokość */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  table-layout: auto; /* Dynamiczna szerokość kolumn */
+}
+
+.user-table th,
+.user-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* Zapobiega zawijaniu się tekstu */
+}
+
+.user-table th {
+  background-color: #f4f4f4;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.user-table th .header-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.user-table th .header-cell input {
+  flex-grow: 1;
+  min-width: 50px;
+}
+
+.user-table th .header-cell .sort-button {
+  padding: 6px 10px;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.user-table th .header-cell .sort-button:hover {
+  background-color: #0056b3;
+}
+
+.user-table th .header-cell .sort-button::before {
+  content: "↓";
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.user-table th .header-cell .sort-button.asc::before {
+  transform: rotate(180deg);
+}
+
+.user-table tbody tr:hover {
+  background-color: rgba(241, 241, 241, 0.8);
+  transition: background-color 0.3s ease;
+}
+
+/* Responsywność na urządzeniach mobilnych */
+@media (max-width: 767px) {
+  .user-table th .header-cell {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .user-table th .header-cell input {
+    width: 100%;
+  }
+
+  .sort-button {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 10px;
+  }
+
+  .user-table td {
+    white-space: nowrap;
+  }
+}

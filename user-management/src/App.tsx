@@ -1,14 +1,18 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import UserTable from "./components/userTable";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import "./styles/UserTable.css";
+import "./styles/App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Header />
+      <main>
         <UserTable />
-      </header>
+      </main>
+      <Footer />
     </div>
   );
 }
