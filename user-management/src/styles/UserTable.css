@@ -1,57 +1,28 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Usuń nadmiar przewijania */
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  height: 100%;
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  background-image: url("../../public/images/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-main {
-  flex-grow: 1;
-  padding: 0 20px;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 20px;
-}
-
 .user-table-container {
   width: 100%;
   margin: 20px 0;
   overflow-x: auto; /* Przewijanie poziome dla małych ekranów */
+  padding-right: 10px; /* Zachowanie marginesu przy prawej krawędzi */
 }
 
 .user-table {
-  width: 100%; /* Zajmij pełną szerokość */
+  width: 100%;
+  max-width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   border-collapse: collapse;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  table-layout: auto; /* Dynamiczna szerokość kolumn */
+  table-layout: fixed; /* Ustalamy stały układ tabeli */
 }
 
 .user-table th,
 .user-table td {
-  padding: 12px;
+  padding: 8px; /* Zmniejszamy padding dla większej elastyczności */
   text-align: left;
   border-bottom: 1px solid #ddd;
   white-space: nowrap; /* Zapobiega zawijaniu się tekstu */
+  font-size: 16px; /* Podstawowy rozmiar czcionki */
+  word-wrap: break-word; /* Pozwala na łamanie długich słów */
 }
 
 .user-table th {
@@ -59,6 +30,12 @@ main {
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Zapewnia dodanie kropek przy zbyt długim tekście */
+}
+
+.user-table td {
+  text-overflow: ellipsis; /* Dodanie kropek przy zbyt długim tekście w komórkach */
 }
 
 .user-table th .header-cell {
@@ -66,7 +43,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
 }
 
 .user-table th .header-cell input {
@@ -75,7 +52,7 @@ main {
 }
 
 .user-table th .header-cell .sort-button {
-  padding: 6px 10px;
+  padding: 4px 8px;
   background-color: #007bff;
   border: 1px solid #007bff;
   border-radius: 4px;
@@ -105,9 +82,36 @@ main {
 }
 
 /* Responsywność na urządzeniach mobilnych */
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
+  .user-table {
+    font-size: 14px; /* Zmniejszamy ogólny rozmiar czcionki */
+  }
+
   .user-table th .header-cell {
-    flex-direction: column;
+    gap: 5px; /* Zmniejszamy odstępy */
+  }
+
+  .user-table th .header-cell input {
+    width: 100%;
+  }
+
+  .user-table th,
+  .user-table td {
+    padding: 6px; /* Zmniejszamy padding */
+  }
+
+  .user-table td {
+    font-size: 13px; /* Zmniejszamy rozmiar czcionki w komórkach */
+  }
+}
+
+@media (max-width: 767px) {
+  .user-table {
+    font-size: 12px; /* Jeszcze bardziej zmniejszamy rozmiar czcionki */
+  }
+
+  .user-table th .header-cell {
+    flex-direction: column; /* Układ w kolumnie */
     align-items: flex-start;
     gap: 5px;
   }
@@ -125,10 +129,28 @@ main {
 
   .user-table th,
   .user-table td {
-    padding: 10px;
+    padding: 5px; /* Zmniejszamy padding */
   }
 
   .user-table td {
     white-space: nowrap;
+    font-size: 12px;
+  }
+}
+
+/* Dostosowanie tabeli na szerokościach pośrednich (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .user-table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .user-table th .header-cell {
+    gap: 5px; /* Zmniejszenie odstępów między elementami */
+  }
+
+  .user-table td {
+    font-size: 14px;
   }
 }

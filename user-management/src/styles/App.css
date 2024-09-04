@@ -1,10 +1,9 @@
-/* Ustawiamy pełną wysokość dla html, body i root */
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Zapewniamy brak przewijania */
+  overflow: auto; /* Umożliwiamy przewijanie */
 }
 
 #root {
@@ -18,17 +17,27 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  background-image: url("../../public/images/background.jpg"); /* Ustawienie obrazu tła */
-  background-size: cover; /* Obrazek wypełnia całą przestrzeń, bez zmiany proporcji */
-  background-position: center; /* Wyśrodkowanie tła */
-  background-attachment: fixed; /* Tło pozostaje w miejscu przy przewijaniu */
-  height: 100vh; /* Pełna wysokość ekranu */
+  background-image: url("../../public/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 main {
   flex-grow: 1;
-  padding: 0 20px; /* Dodajemy padding po bokach */
-  width: 100%; /* Zapewniamy pełną szerokość dla main */
+  padding: 0 20px;
+  width: 100%;
   box-sizing: border-box;
   margin-top: 20px; /* Przesuwamy tabelę w dół, zapewniając margines pod nagłówkiem */
+}
+
+/* Dodajemy odpowiednią responsywność */
+@media (max-width: 767px) {
+  .App {
+    background-size: contain; /* Dostosowanie tła na mniejszych ekranach */
+  }
+
+  main {
+    padding: 0 10px; /* Zmniejszamy padding na mniejszych ekranach */
+  }
 }
