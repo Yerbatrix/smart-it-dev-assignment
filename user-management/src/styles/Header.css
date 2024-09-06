@@ -1,5 +1,5 @@
 .app-header {
-  background: linear-gradient(90deg, #007bff, #00d4ff); /* Dodajemy gradient */
+  background: linear-gradient(90deg, #007bff, #00d4ff); /* Gradient */
   color: white;
   padding: 20px;
   text-align: center;
@@ -8,18 +8,18 @@
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Mocniejszy cień */
   width: 100%; /* Header rozciąga się na pełną szerokość */
-  font-family: "Poppins", sans-serif; /* Nowoczesna czcionka */
+  font-family: "Poppins", sans-serif;
 }
 
 .app-header h1 {
-  margin: 0;
-  font-size: 2.5rem; /* Zwiększamy rozmiar czcionki */
+  margin-right: 30px;
+  font-size: 2.5rem;
   letter-spacing: 1.5px;
-  text-transform: uppercase; /* Wyróżniamy tytuł aplikacji */
-  animation: fadeIn 1.5s ease-in-out; /* Dodajemy animację wczytywania */
+  text-transform: uppercase;
+  animation: fadeIn 1.5s ease-in-out;
+  word-wrap: break-word;
 }
 
-/* Dodajemy delikatną animację wczytywania */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -28,5 +28,29 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .app-header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px; 
+  }
+}
+
+@media (max-width: 767px) {
+  .app-header h1 {
+    font-size: 1.5rem; 
+    letter-spacing: 0.8px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.2rem; /* Minimalny rozmiar czcionki dla bardzo małych ekranów */
+    letter-spacing: 0.5px;
+    line-height: 1.1;
   }
 }

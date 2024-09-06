@@ -1,8 +1,8 @@
 .user-table-container {
   width: 100%;
   margin: 20px 0;
-  overflow-x: auto; /* Przewijanie poziome dla małych ekranów */
-  padding-right: 10px; /* Zachowanie marginesu przy prawej krawędzi */
+  overflow-x: auto; 
+  padding-right: 10px; 
 }
 
 .user-table {
@@ -12,17 +12,17 @@
   border-collapse: collapse;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  table-layout: fixed; /* Ustalamy stały układ tabeli */
+  table-layout: fixed; 
 }
 
 .user-table th,
 .user-table td {
-  padding: 8px; /* Zmniejszamy padding dla większej elastyczności */
+  padding: 8px; 
   text-align: left;
   border-bottom: 1px solid #ddd;
-  white-space: nowrap; /* Zapobiega zawijaniu się tekstu */
-  font-size: 16px; /* Podstawowy rozmiar czcionki */
-  word-wrap: break-word; /* Pozwala na łamanie długich słów */
+  white-space: normal;
+  font-size: 16px; 
+  word-wrap: break-word;
 }
 
 .user-table th {
@@ -31,11 +31,11 @@
   font-weight: bold;
   letter-spacing: 1px;
   overflow: hidden;
-  text-overflow: ellipsis; /* Zapewnia dodanie kropek przy zbyt długim tekście */
+  text-overflow: ellipsis;
 }
 
 .user-table td {
-  text-overflow: ellipsis; /* Dodanie kropek przy zbyt długim tekście w komórkach */
+  text-overflow: ellipsis;
 }
 
 .user-table th .header-cell {
@@ -43,12 +43,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 6px;
+  white-space: nowrap;
 }
 
 .user-table th .header-cell input {
   flex-grow: 1;
-  min-width: 50px;
+  min-width: 40px;
+  
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .user-table th .header-cell .sort-button {
@@ -81,43 +87,51 @@
   transition: background-color 0.3s ease;
 }
 
-/* Responsywność na urządzeniach mobilnych */
+
 @media (max-width: 1024px) {
   .user-table {
-    font-size: 14px; /* Zmniejszamy ogólny rozmiar czcionki */
+    font-size: 12px;
+  }
+
+  .user-table th {
+    font-size: 12px; 
+    letter-spacing: 0.8px;
   }
 
   .user-table th .header-cell {
-    gap: 5px; /* Zmniejszamy odstępy */
+    gap: 4px; 
   }
 
   .user-table th .header-cell input {
     width: 100%;
+    border-right: 1px solid #ddd;
   }
 
   .user-table th,
   .user-table td {
-    padding: 6px; /* Zmniejszamy padding */
+    padding: 4px; 
   }
 
   .user-table td {
-    font-size: 13px; /* Zmniejszamy rozmiar czcionki w komórkach */
+    font-size: 12px;
   }
 }
 
 @media (max-width: 767px) {
   .user-table {
-    font-size: 12px; /* Jeszcze bardziej zmniejszamy rozmiar czcionki */
+    font-size: 10px; 
   }
 
   .user-table th .header-cell {
-    flex-direction: column; /* Układ w kolumnie */
+    flex-direction: column; 
     align-items: flex-start;
-    gap: 5px;
+    gap: 4px;
   }
 
   .user-table th .header-cell input {
     width: 100%;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
   }
 
   .sort-button {
@@ -129,21 +143,25 @@
 
   .user-table th,
   .user-table td {
-    padding: 5px; /* Zmniejszamy padding */
+    padding: 5px; 
   }
 
   .user-table td {
-    white-space: nowrap;
+    white-space: normal;
     font-size: 12px;
   }
 }
 
-/* Dostosowanie tabeli na szerokościach pośrednich (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
   .user-table {
     width: 100%;
     max-width: 100%;
     overflow-x: auto;
+  }
+
+  .user-table th {
+    font-size: 12px; 
+    letter-spacing: 0.6px;
   }
 
   .user-table th .header-cell {
