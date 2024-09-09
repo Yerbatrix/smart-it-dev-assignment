@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/user-management-app/static/css/main.33afbd0f.css",
-    "main.js": "/user-management-app/static/js/main.3b96c719.js",
-    "static/media/background.jpg": "/user-management-app/static/media/background.8cd318c6b582568c7bdc.jpg",
-    "index.html": "/user-management-app/index.html",
-    "main.33afbd0f.css.map": "/user-management-app/static/css/main.33afbd0f.css.map",
-    "main.3b96c719.js.map": "/user-management-app/static/js/main.3b96c719.js.map"
+    "main.css": "/smart-it-dev-assignment/static/css/main.f68dd657.css",
+    "main.js": "/smart-it-dev-assignment/static/js/main.3b96c719.js",
+    "static/media/background.jpg": "/smart-it-dev-assignment/static/media/background.8cd318c6b582568c7bdc.jpg",
+    "index.html": "/smart-it-dev-assignment/index.html",
+    "main.f68dd657.css.map": "/smart-it-dev-assignment/static/css/main.f68dd657.css.map",
+    "main.3b96c719.js.map": "/smart-it-dev-assignment/static/js/main.3b96c719.js.map"
   },
   "entrypoints": [
-    "static/css/main.33afbd0f.css",
+    "static/css/main.f68dd657.css",
     "static/js/main.3b96c719.js"
   ]
 }
