@@ -1,46 +1,98 @@
-# Getting Started with Create React App
+# User Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **User Management App** that allows users to view, filter, and sort a list of users fetched from an external API. The app is built using **React**, **Redux** for state management, and **TypeScript**. It is styled using modern CSS techniques and follows responsive design principles to adapt to various screen sizes.
 
-## Available Scripts
+## Features
 
+- **Filterable User List**: Users can filter the user list by `name`, `username`, `email`, or `phone`, with real-time updates.
+- **Sortable Columns**: Users can sort the data by clicking on the respective column headers (name, username, email, phone). Sorting is available in both ascending and descending order.
+- **API Integration**: Data is fetched from a public API (JSONPlaceholder) using `axios`, with error handling and loading states managed through Redux.
+- **Notifications**: Utilizes `Notiflix` to display success or error notifications when fetching user data.
+- **Responsive Design**: The layout is optimized for both desktop and mobile devices, ensuring a smooth user experience on different screen sizes.
+
+## Project Structure
+
+The project follows a modular structure, separating components, Redux state management, and styles. The primary sections are:
+
+### Components
+
+- **`Header.tsx`**: Displays the app's title.
+- **`Footer.tsx`**: Displays the footer with links to LinkedIn and GitHub.
+- **`UserTable.tsx`**: The main component displaying the user table with filters and sorting functionality.
+- **`FilterInput.tsx`**: A reusable input component for filtering users.
+
+### Redux
+
+- **`userSlice.ts`**: Handles the fetching and storing of users from the API.
+- **`filterSlice.ts`**: Manages the filter state for the user list.
+- **`sortSlice.ts`**: Manages the sort state for the table columns.
+- **`store.ts`**: Configures the Redux store, combining the user, filter, and sort reducers.
+
+### Styles
+
+- **`App.css`**: Global styles, including layout and background styling.
+- **`Header.css`**: Styling for the header component.
+- **`Footer.css`**: Styling for the footer component.
+- **`UserTable.css`**: Styling for the user table, ensuring responsive and accessible design.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Redux**: A state management library used to manage global state.
+- **TypeScript**: A superset of JavaScript that provides static typing.
+- **Axios**: A promise-based HTTP client for API requests.
+- **Notiflix**: A library used to display notifications.
+- **CSS**: Styling language for defining the appearance and layout of the application.
+
+## Setup
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Yerbatrix/user-management-app.git
+   cd user-management
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+   The app will be available at http://localhost:3000
+
+Available Scripts
 In the project directory, you can run:
+npm start: Runs the app in development mode.
+npm build: Builds the app for production to the build folder.
 
-### `npm start`
+API
+The application fetches data from the JSONPlaceholder API. This is a fake online REST API for testing and prototyping:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Users Endpoint: https://jsonplaceholder.typicode.com/users
+Future Improvements
+Pagination: Implement pagination to handle larger datasets more efficiently.
+User Details Page: Enable clicking on a user to see more detailed information about them.
+Unit Tests: Add unit tests to ensure component and Redux logic reliability.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Author
+Developed by Rafal The Druid.
+Explore more projects on GitHub.
 
-### `npm test`
+License
+This project is open source and available under the MIT License.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Summary:
 
-### `npm run build`
+This README.md provides:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. A detailed project overview and feature list.
+2. Instructions for setting up and running the app.
+3. Technical details about the libraries and tools used.
+4. Future improvement suggestions.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Let me know if you'd like any further customizations!
