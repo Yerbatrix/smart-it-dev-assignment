@@ -2,6 +2,9 @@
 
 This project is a **User Management App** that allows users to view, filter, and sort a list of users fetched from an external API. The app is built using **React**, **Redux** for state management, and **TypeScript**. It is styled using modern CSS techniques and follows responsive design principles to adapt to various screen sizes.
 
+This is a live demo of the User Management App hosted on GitHub Pages:  
+[Live Demo](https://yerbatrix.github.io/smart-it-dev-assignment/)
+
 ## Features
 
 - **Filterable User List**: Users can filter the user list by `name`, `username`, `email`, or `phone`, with real-time updates.
