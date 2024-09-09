@@ -3,10 +3,10 @@
   color: white;
   padding: 20px;
   text-align: center;
-  margin-top: auto; /* Zapewnia, że stopka "wypycha" się na dół */
+  margin-top: auto;
   font-family: "Poppins", sans-serif;
-  width: 100%; /* Stopka zajmuje pełną szerokość strony */
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Delikatny cień na górze stopki */
+  width: 100%;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .app-footer p {

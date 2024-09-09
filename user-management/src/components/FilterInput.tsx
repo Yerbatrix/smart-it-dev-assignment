@@ -12,7 +12,7 @@ import {
   selectEmailFilter,
   selectPhoneFilter,
 } from "../redux/filters/filterSelectors";
-import { RootState } from "../redux/store"; // Importowanie typu RootState
+import { RootState } from "../redux/store";
 
 interface FilterInputProps {
   field: "name" | "username" | "email" | "phone";
@@ -25,7 +25,6 @@ export const FilterInput: React.FC<FilterInputProps> = ({
 }) => {
   const dispatch = useDispatch();
 
-  // Zmieniamy typowanie useSelector, aby korzystał z RootState
   const filterValue = useSelector((state: RootState) => {
     switch (field) {
       case "name":

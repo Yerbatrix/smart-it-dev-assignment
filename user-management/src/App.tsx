@@ -1,4 +1,3 @@
-import React from "react";
 import UserTable from "./components/userTable";
 import Header from "./components/Header";
 import Footer from "./components/Footer";

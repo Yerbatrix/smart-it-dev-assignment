@@ -3,13 +3,13 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: auto; /* Umożliwiamy przewijanie */
+  overflow: auto;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Minimalna wysokość całego widoku */
+  min-height: 100vh;
   height: 100%;
 }
 
@@ -28,16 +28,15 @@ main {
   padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
-  margin-top: 20px; /* Przesuwamy tabelę w dół, zapewniając margines pod nagłówkiem */
+  margin-top: 20px;
 }
 
-/* Dodajemy odpowiednią responsywność */
 @media (max-width: 767px) {
   .App {
-    background-size: contain; /* Dostosowanie tła na mniejszych ekranach */
+    background-size: cover;
   }
 
   main {
-    padding: 0 10px; /* Zmniejszamy padding na mniejszych ekranach */
+    padding: 0 10px;
   }
 }

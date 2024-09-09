@@ -1,8 +1,8 @@
 .user-table-container {
   width: 100%;
   margin: 20px 0;
-  overflow-x: auto; 
-  padding-right: 10px; 
+  overflow-x: auto;
+  padding-right: 10px;
 }
 
 .user-table {
@@ -12,16 +12,16 @@
   border-collapse: collapse;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  table-layout: fixed; 
+  table-layout: fixed;
 }
 
 .user-table th,
 .user-table td {
-  padding: 8px; 
+  padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd;
   white-space: normal;
-  font-size: 16px; 
+  font-size: 16px;
   word-wrap: break-word;
 }
 
@@ -50,7 +50,7 @@
 .user-table th .header-cell input {
   flex-grow: 1;
   min-width: 40px;
-  
+
   border: 1px solid #ddd;
   box-sizing: border-box;
   overflow: hidden;
@@ -87,19 +87,18 @@
   transition: background-color 0.3s ease;
 }
 
-
 @media (max-width: 1024px) {
   .user-table {
     font-size: 12px;
   }
 
   .user-table th {
-    font-size: 12px; 
+    font-size: 12px;
     letter-spacing: 0.8px;
   }
 
   .user-table th .header-cell {
-    gap: 4px; 
+    gap: 4px;
   }
 
   .user-table th .header-cell input {
@@ -109,7 +108,7 @@
 
   .user-table th,
   .user-table td {
-    padding: 4px; 
+    padding: 4px;
   }
 
   .user-table td {
@@ -119,11 +118,11 @@
 
 @media (max-width: 767px) {
   .user-table {
-    font-size: 10px; 
+    font-size: 10px;
   }
 
   .user-table th .header-cell {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
     gap: 4px;
   }
@@ -143,7 +142,7 @@
 
   .user-table th,
   .user-table td {
-    padding: 5px; 
+    padding: 5px;
   }
 
   .user-table td {
@@ -160,12 +159,12 @@
   }
 
   .user-table th {
-    font-size: 12px; 
+    font-size: 12px;
     letter-spacing: 0.6px;
   }
 
   .user-table th .header-cell {
-    gap: 5px; /* Zmniejszenie odstępów między elementami */
+    gap: 5px;
   }
 
   .user-table td {

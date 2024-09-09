@@ -1,13 +1,13 @@
 .app-header {
-  background: linear-gradient(90deg, #007bff, #00d4ff); /* Gradient */
+  background: linear-gradient(90deg, #007bff, #00d4ff);
   color: white;
   padding: 20px;
   text-align: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Mocniejszy cień */
-  width: 100%; /* Header rozciąga się na pełną szerokość */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
   font-family: "Poppins", sans-serif;
 }
 
@@ -31,17 +31,16 @@
   }
 }
 
-
 @media (max-width: 1024px) {
   .app-header h1 {
     font-size: 2rem;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
   }
 }
 
 @media (max-width: 767px) {
   .app-header h1 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
     letter-spacing: 0.8px;
     line-height: 1.2;
   }
@@ -49,7 +48,7 @@
 
 @media (max-width: 480px) {
   .app-header h1 {
-    font-size: 1.2rem; /* Minimalny rozmiar czcionki dla bardzo małych ekranów */
+    font-size: 1.2rem;
     letter-spacing: 0.5px;
     line-height: 1.1;
   }

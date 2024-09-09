@@ -16,12 +16,12 @@ import Notiflix from "notiflix";
 import "./../styles/UserTable.css";
 
 Notiflix.Notify.init({
-  position: "left-top", // Przesuwamy Notiflix na lewy górny róg
+  position: "left-top",
   width: "280px",
   distance: "20px",
   opacity: 0.9,
   borderRadius: "8px",
-  timeout: 4000, // Powiadomienie będzie widoczne przez 4 sekundy
+  timeout: 4000,
 });
 
 const UserTable: React.FC = () => {
@@ -29,13 +29,11 @@ const UserTable: React.FC = () => {
   const users = useSelector(selectAllUsers);
   const status = useSelector(selectUserStatus);
 
-  // Pobranie wartości filtrów z Redux Store
   const nameFilter = useSelector(selectNameFilter);
   const usernameFilter = useSelector(selectUsernameFilter);
   const emailFilter = useSelector(selectEmailFilter);
   const phoneFilter = useSelector(selectPhoneFilter);
 
-  // Pobieranie informacji o bieżącym stanie sortowania
   const { sortBy, direction } = useSelector((state: RootState) => state.sort);
 
   useEffect(() => {
@@ -52,7 +50,6 @@ const UserTable: React.FC = () => {
     }
   }, [status, dispatch]);
 
-  // Filtrowanie użytkowników
   let filteredUsers = users.filter(
     (user) =>
       user.name.toLowerCase().includes(nameFilter.toLowerCase()) &&
@@ -61,7 +58,6 @@ const UserTable: React.FC = () => {
       user.phone.toLowerCase().includes(phoneFilter.toLowerCase())
   );
 
-  // Sortowanie użytkowników w zależności od kolumny i kierunku
   filteredUsers = filteredUsers.sort((a, b) => {
     if (!sortBy) return 0;
 
@@ -75,7 +71,6 @@ const UserTable: React.FC = () => {
     }
   });
 
-  // Funkcja obsługująca zmianę sortowania po kliknięciu na przycisk
   const handleSort = (column: "name" | "username" | "email" | "phone") => {
     dispatch(setSortColumn(column));
   };
